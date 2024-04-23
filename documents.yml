@@ -7,5 +7,5 @@ spring:
       uri: "{cipher}7fd9f33382e812380a18cf477dd2186a05e8e7a3ad073af70ba4e7eedcf930aba304e2ec3c5e8059461ce4ae40a09ed0b3454a7a7b4f6fb37ecf20af3841dce77dab8a37bfdde732c060c96f47e7b92cc4a5de7f02303c5bfce0071f4ba7f368325d27195364d40ccc6099822479a1797a57de54f6e36abc250d0c816c52ce46ee0e27c4d28afe72d924bc3423045d369f29aaccdd78c4975f395d92b7d16fba"
       database: documents
 rest-template:
-  timeout: 600000
+  timeout: 300000
   pool-size: 5
