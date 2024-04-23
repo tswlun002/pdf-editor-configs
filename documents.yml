@@ -8,4 +8,4 @@ spring:
       database: documents
 rest-template:
   timeout: 300000
-  pool-size: 5
+  pool-size: 10
