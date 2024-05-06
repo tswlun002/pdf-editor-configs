@@ -10,7 +10,6 @@ spring:
       port: 27017
       username: document-service
       password: pdfdocument
-      #uri: mongodb+srv://pdf_document:pdfdocument@document-service.ux4nj27.mongodb.net/?retryWrites=true&w=majority&appName=document-service
 rest-template:
   timeout: 300000
   pool-size: 10
