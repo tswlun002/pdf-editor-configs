@@ -10,6 +10,21 @@ spring:
       port: 27017
       username: document-service
       password: b5699d56d531870962053f5e36108ebc37048fb51df332ac2522921a961693a5
+   kafka:
+    topic: download-document-event
+    template:
+      default-topic: download-document-event
+    producer:
+      bootstrap-server: localhost:9091, localhost:9093, localhost:9094
+      key-serializer: "org.apache.kafka.common.serialization.StringSerializer"
+      value-serializer: "org.apache.kafka.common.serialization.ByteArraySerializer"
+      properties:
+        retries: 10
+    admin:
+      properties:
+        bootstrap.servers: localhost:9091,localhost:9093,localhost:9094
+        retries: 10
+        retry.backoff.ms: 100000
 rest-template:
   timeout: 300000
   pool-size: 10
