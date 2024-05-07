@@ -19,6 +19,21 @@ spring:
         acks: All
         idempotence: true
         delivery.timeout.ms: 1200000
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8071
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:19091
+    bus:
+      trace:
+        enabled: true
+      refresh:
+        enabled: true
+      env:
+        enabled: true
 mail:
   host: smtp.gmail.com
   protocol: smtp
