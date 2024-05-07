@@ -9,7 +9,7 @@ spring:
       host: localhost
       port: 27017
       username: document-service
-      password: b5699d56d531870962053f5e36108ebc37048fb51df332ac2522921a961693a5
+      password: {cipher}b5699d56d531870962053f5e36108ebc37048fb51df332ac2522921a961693a5
   kafka:
     topic: download-document-event
     template:
