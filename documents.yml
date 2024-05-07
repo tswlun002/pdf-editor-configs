@@ -15,7 +15,7 @@ spring:
     template:
       default-topic: download-document-event
     producer:
-      bootstrap-server: localhost:19092, localhost:19093, localhost:19094
+      bootstrap-servers: localhost:19092, localhost:19093, localhost:19094
       key-serializer: "org.apache.kafka.common.serialization.StringSerializer"
       value-serializer: "org.apache.kafka.common.serialization.ByteArraySerializer"
       properties:
