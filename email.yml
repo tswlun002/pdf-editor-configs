@@ -8,7 +8,7 @@ spring:
         binder:
           brokers: localhost:19091
           configuration:
-            auto.create.topics.enable: "true"
+            auto.create.topics.enable: "false"
     bus:
       trace:
         enabled: true
