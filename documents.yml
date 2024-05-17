@@ -6,7 +6,7 @@ spring:
     mongodb:
       authentication-database: admin
       database: documents
-      host: localhost
+      host: mongodb
       port: 27017
       username: document-service
       password: "{cipher}b5699d56d531870962053f5e36108ebc37048fb51df332ac2522921a961693a5"
