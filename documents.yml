@@ -15,14 +15,14 @@ spring:
     template:
       default-topic: download-document-event
     producer:
-      bootstrap-servers: localhost:19092, localhost:19093, localhost:19094
+      bootstrap-servers: pdfKafkaBroker1:9092, pdfKafkaBroker1:9093, pdfKafkaBroker3:9094
       key-serializer: "org.apache.kafka.common.serialization.StringSerializer"
       value-serializer: "org.apache.kafka.common.serialization.ByteArraySerializer"
       properties:
         retries: 10
     admin:
       properties:
-        bootstrap.servers: localhost:19092, localhost:19093, localhost:19094
+        bootstrap.servers: pdfKafkaBroker1:9092, pdfKafkaBroker1:9093, pdfKafkaBroker3:9094
         retries: 10
         retry.backoff.ms: 100000
 rest-template:
