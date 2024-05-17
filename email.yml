@@ -1,37 +1,20 @@
 spring:
-  cloud:
-    config:
-      enabled: true
-      uri: http://localhost:8071
-    stream:
-      kafka:
-        binder:
-          brokers: localhost:19091
-          configuration:
-            auto.create.topics.enable: "false"
-    bus:
-      trace:
-        enabled: true
-      refresh:
-        enabled: true
-      env:
-        enabled: true
   kafka:
     topic: download-document-event
     template:
       default-topic: download-document-event
     consumer:
-      bootstrap-servers: localhost:19092,localhost:19093,localhost:19094
+      bootstrap-servers: pdfKafkaBroker1:9092, pdfKafkaBroker1:9093, pdfKafkaBroker3:9094
       key-deserializer: "org.apache.kafka.common.serialization.StringDeserializer"
       value-deserializer: "org.apache.kafka.common.serialization.ByteArrayDeserializer"
       group-id: download-document-event-listener-group
     producer:
-      bootstrap-servers: localhost:19092,localhost:19093,localhost:19094
+      bootstrap-servers: pdfKafkaBroker1:9092, pdfKafkaBroker1:9093, pdfKafkaBroker3:9094
       key-serializer: "org.apache.kafka.common.serialization.StringSerializer"
       value-serializer: "org.apache.kafka.common.serialization.ByteArraySerializer"
     admin:
       properties:
-        bootstrap.servers: localhost:19092,localhost:19093,localhost:19094
+        bootstrap.servers: pdfKafkaBroker1:9092, pdfKafkaBroker1:9093, pdfKafkaBroker3:9094
         max.in.flight.requests.per.connection: 1
         acks: All
         idempotence: true
