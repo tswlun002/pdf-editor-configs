@@ -28,3 +28,8 @@ spring:
 rest-template:
   timeout: 500000
   pool-size: 10
+download:
+  message:
+    successful: "Document is uploaded."
+    fail: "Failed to upload document."
+
